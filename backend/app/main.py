@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from together import Together
 import pickle
-load_dotenv
+load_dotenv(dotenv_path=r"C:\Users\rafbl\Downloads\patent_assistant\backend\app\.env")
 from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
