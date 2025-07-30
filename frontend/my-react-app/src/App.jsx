@@ -147,7 +147,7 @@ function App() {
                     <span></span>
                     <span></span>
                   </div>
-                  <span className="typing-text">Analyzing your patent question...</span>
+                  <span className="typing-text">...</span>
                 </div>
               </div>
             </div>

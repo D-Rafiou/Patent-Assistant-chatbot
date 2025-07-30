@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   background: #ffffff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);

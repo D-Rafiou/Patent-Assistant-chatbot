@@ -35,7 +35,7 @@ def clean_response(raw_text: str) -> str:
     cleaned_text = ' '.join(cleaned_text.split())
 
     return cleaned_text
-client = Together(api_key="499314ef838bf53afd2b502d4e78c01551edd0028219be7b6f12f166341f0947") # auth defaults to os.environ.get("TOGETHER_API_KEY")
+client = Together() # auth defaults to os.environ.get("TOGETHER_API_KEY")
 
 @app.get("/question/{query}")
 def answerUser(query:str):
