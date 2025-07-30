@@ -7,10 +7,17 @@ from together import Together
 import pickle
 load_dotenv
 from typing import Union
-
 from fastapi import FastAPI
-app = FastAPI()
+from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
 index = faiss.read_index("./store/my_index.faiss")
 
 with open("./store/chunks_map.pkl", "rb") as f:
@@ -42,12 +49,13 @@ def answerUser(query:str):
     chunk_map[idx]["content"] for idx in indices[0]
 )
     prompt = f"""You are an AI legal assistant with expert knowledge of United States patent law and the USPTO (United States Patent and Trademark Office).  
-    Use the following context **internally** to answer the user's question, but **do not mention the context, its existence, or that you used it** in your response.  
-    Respond as if the knowledge is your own and part of your general expertise.  
-    If the context does not fully answer the question, use your own legal knowledge to fill in any gaps as needed. Do not show your thinking answer directly
+    Use the following context internally to answer the user's question. **Do not mention the context, its existence, or that it was used** in your response.  
+    Respond as if the knowledge is your own, part of your general expertise.  
+    If the context does not fully answer the question, rely on your legal knowledge to fill in any gaps.  
+    Do not show your reasoning. Answer directly. No citations or references.
 
     Context: {context}  
-    Question: {query}"""
+Question: {query}"""
     response =  client.chat.completions.create(
     model="Qwen/Qwen3-235B-A22B-Thinking-2507",
     messages=[
