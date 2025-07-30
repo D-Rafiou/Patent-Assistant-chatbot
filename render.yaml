@@ -2,7 +2,8 @@ services:
   - type: web
     name: my-fastapi-app
     env: python
-    buildCommand: ""
+    rootDir: ./backend  
+    buildCommand: pip install -r requirements.txt  
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
     plan: free
     runtime: python
