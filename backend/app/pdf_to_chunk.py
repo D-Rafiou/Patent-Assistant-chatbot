@@ -11,6 +11,7 @@ overlap = 50
 
 data = "../data/mpep"
 output_file = "../output/output.json"
+print(os.path.exists(data))
 
 def clean_text(text):
     return ' '.join(text.split()) # remove excessive spacing
