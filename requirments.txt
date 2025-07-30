@@ -1,0 +1,9 @@
+beautifulsoup4==4.12.2
+pdfplumber
+nltk
+sentence_transformers
+faiss-cpu
+numpy
+together
+dotenv
+uvicorn
