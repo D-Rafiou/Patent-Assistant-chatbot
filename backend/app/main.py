@@ -48,14 +48,22 @@ def answerUser(query:str):
     context = "\n\n".join(
     chunk_map[idx]["content"] for idx in indices[0]
 )
-    prompt = f"""You are an AI legal assistant with expert knowledge of United States patent law and the USPTO (United States Patent and Trademark Office).  
-    Use the following context internally to answer the user's question. **Do not mention the context, its existence, or that it was used** in your response.  
-    Respond as if the knowledge is your own, part of your general expertise.  
-    If the context does not fully answer the question, rely on your legal knowledge to fill in any gaps.  
-    Do not show your reasoning. Answer directly. No citations or references.
+    prompt = f"""You are an AI legal assistant with expert knowledge of United States patent law and the USPTO (United States Patent and Trademark Office).
 
-    Context: {context}  
-Question: {query}"""
+    Use the following context internally to answer the user's question. **Do not mention the context, its existence, or that it was used** in your response.
+
+    Respond as if the knowledge is your own and part of your general expertise. If the context does not fully answer the question, rely on your legal knowledge to fill in any gaps.
+
+    Do not explain your reasoning. Do not include citations or references.
+
+    If the question is unrelated to U.S. patent law, respond clearly that it is outside your domain and you cannot answer.
+
+    Context:
+    {context}
+
+    Question:
+    {query}
+    """
     response =  client.chat.completions.create(
     model="Qwen/Qwen3-235B-A22B-Thinking-2507",
     messages=[
