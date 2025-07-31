@@ -62,7 +62,7 @@ function App() {
 
     try {
       // Replace with your actual backend endpoint
-    const response = await fetch(`http://127.0.0.1:8000/question/${encodeURIComponent(input.trim())}`)
+    const response = await fetch(`http://localhost:8000/question/${encodeURIComponent(input.trim())}`)
 
       if (!response.ok) {
         throw new Error("Failed to get response from server")

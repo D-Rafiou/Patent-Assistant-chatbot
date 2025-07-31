@@ -6,4 +6,4 @@ numpy
 together
 dotenv
 uvicorn
-fastapi[standard]
+fastapi[all]
