@@ -6,31 +6,30 @@ A chatbot that answers questions about the patent process using vector search an
 
 ## 🔧 Project Structure
 
+```plaintext
 Patent-Assistant-chatbot/
 ├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── chunks_to_vector.py
-│   │   ├── pdf_to_chunks.py
-│   │   └── store/
-│   │       ├── index.faiss
-│   │       └── chunk_map.json
-│   ├── data/
-│   │   └── [your PDF files here]
-│   ├── output/
-│   │   └── output.json
-│   └── requirements.txt
+│ ├── app/
+│ │ ├── main.py
+│ │ ├── chunks_to_vector.py
+│ │ ├── pdf_to_chunks.py
+│ │ └── store/
+│ │ ├── index.faiss
+│ │ └── chunk_map.json
+│ ├── data/
+│ │ └── [your PDF files here]
+│ ├── output/
+│ │ └── output.json
+│ └── requirements.txt
 ├── frontend/
-│   └── my-react-app/
-│       ├── public/
-│       ├── src/
-│       │   ├── App.jsx
-│       │   ├── App.css
-│       │   └── ...
-│       └── ...
+│ └── my-react-app/
+│ ├── public/
+│ ├── src/
+│ │ ├── App.jsx
+│ │ ├── App.css
+│ │ └── ...
+│ └── ...
 └── README.txt
-
----
 
 ## 🧠 How It Works
 
