@@ -1,4 +1,3 @@
-beautifulsoup4==4.12.2
 pdfplumber
 nltk
 sentence_transformers
@@ -7,3 +6,4 @@ numpy
 together
 dotenv
 uvicorn
+fastapi[standard]
