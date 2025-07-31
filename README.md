@@ -66,8 +66,13 @@ A static React app using Vite. All main logic and styling is in `App.jsx` and `A
 
 ---
 
+## 🛠️ Technologies Used
+
+- Backend: FastAPI, FAISS, Sentence Transformers, Python, pdfplumber, numpy
+- Frontend: React, Vite, JavaScript, CSS
+- APIs: Together AI API for natural language generation
+- Others: Git, GitHub, npm, pip
 
 
 
-
-![Patent Chatbot Screenshot](screenshot/example.png)
+![Patent Chatbot Screenshot](example.png)
