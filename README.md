@@ -17,7 +17,7 @@ Patent-Assistant-chatbot/
 │ │ ├── index.faiss
 │ │ └── chunk_map.json
 │ ├── data/
-│ │ └── [your PDF files here]
+│ │ └── [PDF files here]
 │ ├── output/
 │ │ └── output.json
 │ └── requirements.txt
