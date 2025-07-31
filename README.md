@@ -1,4 +1,4 @@
-# This tool was created for personal research and educational purposes not intended as professional legal advice.
+# This tool was created for personal research and educational purposes, not intended as professional legal advice.
 
 # Patent-Assistant-chatbot
 
