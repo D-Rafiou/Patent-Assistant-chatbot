@@ -75,4 +75,4 @@ A static React app using Vite. All main logic and styling is in `App.jsx` and `A
 
 
 
-![Patent Chatbot Screenshot](example.png)
+<img src="example.png" alt="Patent Chatbot Screenshot" width="600"/>
