@@ -1,3 +1,5 @@
+#This tool was created for personal research and educational purposes—not intended as professional legal advice.
+
 # Patent-Assistant-chatbot
 
 A chatbot that answers questions about the patent process using vector search and the Together AI API.
